@@ -23,6 +23,7 @@ If you have a reference to the HttpContext:
     HttpContext.Current.SuppressFormsAuthRedirect();
 
 If you only have a reference to the HttpResponseMessage, such as inside a WCF Web Api HttpOperationHandler:
+
     var response = new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized);
     response.SuppressFormsAuthRedirect();
     throw new HttpResponseException(response);
